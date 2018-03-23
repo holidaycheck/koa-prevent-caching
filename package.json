@@ -1,0 +1,56 @@
+{
+  "name": "koa-prevent-caching",
+  "version": "1.0.0",
+  "description": "Set appropriate response headers to prevent caching.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/holidaycheck/koa-prevent-caching.git"
+  },
+  "keywords": [
+    "koa",
+    "caching",
+    "middleware"
+  ],
+  "main": "lib/preventCaching",
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "nyc ava 'test/**/*Spec.js'"
+  },
+  "author": "Mathias Schreck <schreck.mathias@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^4.19.1",
+    "eslint-config-holidaycheck": "^0.12.1",
+    "eslint-plugin-node": "^6.0.1",
+    "koa": "^2.5.0",
+    "nyc": "^11.6.0",
+    "supertest": "^3.0.0"
+  },
+  "nyc": {
+    "all": true,
+    "cache": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "coverage",
+      "test"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "check-coverage": true
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
