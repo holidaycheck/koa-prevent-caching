@@ -17,6 +17,7 @@
     "README.md",
     "LICENSE"
   ],
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
@@ -24,6 +25,9 @@
   },
   "author": "Mathias Schreck <schreck.mathias@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@types/koa": "2.0.46"
+  },
   "devDependencies": {
     "ava": "^0.25.0",
     "eslint": "^4.19.1",
