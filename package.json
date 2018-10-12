@@ -14,6 +14,7 @@
   "main": "lib/preventCaching",
   "files": [
     "lib/",
+    "index.d.ts",
     "README.md",
     "LICENSE"
   ],
